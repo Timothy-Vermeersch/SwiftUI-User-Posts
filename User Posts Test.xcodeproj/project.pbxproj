@@ -12,6 +12,8 @@
 		51B3D2C12A450C9E004793CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51B3D2C02A450C9E004793CF /* Assets.xcassets */; };
 		51B3D2C42A450C9E004793CF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51B3D2C32A450C9E004793CF /* Preview Assets.xcassets */; };
 		51B3D2CC2A450CC2004793CF /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B3D2CB2A450CC2004793CF /* PostModel.swift */; };
+		51B3D2CF2A451151004793CF /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B3D2CE2A451151004793CF /* PostService.swift */; };
+		51B3D2D12A45146D004793CF /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B3D2D02A45146D004793CF /* PostViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,8 @@
 		51B3D2C02A450C9E004793CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		51B3D2C32A450C9E004793CF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		51B3D2CB2A450CC2004793CF /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
+		51B3D2CE2A451151004793CF /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
+		51B3D2D02A45146D004793CF /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +57,7 @@
 		51B3D2BB2A450C9B004793CF /* User Posts Test */ = {
 			isa = PBXGroup;
 			children = (
+				51B3D2CD2A45113F004793CF /* Network */,
 				51B3D2CA2A450CAB004793CF /* Model */,
 				51B3D2BC2A450C9B004793CF /* User_Posts_TestApp.swift */,
 				51B3D2BE2A450C9B004793CF /* ContentView.swift */,
@@ -74,8 +79,17 @@
 			isa = PBXGroup;
 			children = (
 				51B3D2CB2A450CC2004793CF /* PostModel.swift */,
+				51B3D2D02A45146D004793CF /* PostViewModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		51B3D2CD2A45113F004793CF /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				51B3D2CE2A451151004793CF /* PostService.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,9 +162,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51B3D2D12A45146D004793CF /* PostViewModel.swift in Sources */,
 				51B3D2BF2A450C9B004793CF /* ContentView.swift in Sources */,
 				51B3D2CC2A450CC2004793CF /* PostModel.swift in Sources */,
 				51B3D2BD2A450C9B004793CF /* User_Posts_TestApp.swift in Sources */,
+				51B3D2CF2A451151004793CF /* PostService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
