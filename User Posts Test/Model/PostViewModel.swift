@@ -33,4 +33,14 @@ class PostViewModel: ObservableObject {
 			}
 			.store(in: &cancellable)
 	}
+	
+	func getPostsByAuthor(_ id: Int) -> [Post]{
+		var authorsPosts: [Post] = []
+		for post in posts {
+			if(post.author == id){
+				authorsPosts.append(post)
+			}
+		}
+		return authorsPosts
+	}
 }

@@ -10,14 +10,28 @@ import SwiftUI
 struct ContentView: View {
 	@StateObject var postViewModel = PostViewModel()
     var body: some View {
-        VStack {
-			  List{
-				  ForEach(postViewModel.posts){ post in
-					  PostView(post: post)
-				  }
-			  }
-        }
-        .padding()
+		 NavigationView {
+			 VStack {
+				 List{
+					 ForEach(1..<11){ i in
+						 NavigationLink(destination: {
+							 List{
+								 ForEach(postViewModel.getPostsByAuthor(i)){ post in
+									 
+									 PostView(post: post)
+								 }
+							 }
+						 }, label: {
+							 Text("User \(String(i)) Posts")
+						 })
+						 .frame(maxWidth: .infinity)
+					 }
+				 }
+				 .frame(maxWidth: .infinity)
+				 .scrollContentBackground(.hidden)
+			 }
+			 .navigationTitle("Home")
+		 }
     }
 }
 
