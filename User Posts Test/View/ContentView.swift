@@ -11,14 +11,10 @@ struct ContentView: View {
 	@StateObject var postViewModel = PostViewModel()
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-			  Button {
-				  postViewModel.getPosts()
-			  } label: {
-				  Text("Click me")
+			  List{
+				  ForEach(postViewModel.posts){ post in
+					  PostView(post: post)
+				  }
 			  }
         }
         .padding()
